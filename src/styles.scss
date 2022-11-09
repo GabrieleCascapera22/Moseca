@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+ngb-carousel{
+  margin-top:-19px;
+margin-bottom: 20px;
+
+img {
+width: 1550px!important;
+height:570px!important;
+}
+
+h3{
+  font-family: 'Luckiest Guy', cursive;
+}
+.carousel-control-next, .carousel-control-prev {
+  opacity: 0.4!important;
+color:  #A50B5E!important;
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+color: #A50B5E!important;
+
+}
+.visually-hidden{
+  color: #A50B5E!important;
+}
+}
+}
+
+
+
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
