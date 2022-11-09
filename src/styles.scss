@@ -13,11 +13,34 @@ height:570px!important;
 }
 
 h3{
+  padding-bottom: 240px;
   font-family: 'Luckiest Guy', cursive;
 }
 .carousel-control-next, .carousel-control-prev {
-  opacity: 0.5!important;
+  opacity: 1!important;
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    margin-bottom: 250px;
+  }
 }
+
+section{
+height: 270px;
+
+  .fascia{
+    background-color:  #A50B5E!important;
+   height: 20px;
+   margin-top: 1px;
+  }
+
+  .citazione{
+    text-align: center;
+    width: 40%;
+    padding-top: 20px;
+  padding-left: 40px;
+  margin-left: 28%;
+
+  }
+  }
 }
 
 

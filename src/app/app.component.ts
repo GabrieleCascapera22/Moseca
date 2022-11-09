@@ -4,6 +4,9 @@ import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { faCompactDisc } from '@fortawesome/free-solid-svg-icons';
+import { faRecordVinyl } from '@fortawesome/free-solid-svg-icons';
+import { faHeartMusicCameraBolt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +15,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'Moseca';
-  casetta=faHouzz;
+  casetta=faCompactDisc;
   utente=faCircleUser;
   lente=faSearch;
   musica=faMusic;
