@@ -114,7 +114,7 @@ export const CANZONI:Canzone[]=
   {
   _id:11,
   title:'dentista croazia',
-  image:'https://www.allmusicitalia.it/wp-content/uploads/2022/08/Pinguini-Tattici-Nucleari-Dentista-croazia-testo-Significato.jpg',
+  image:'https://static-new.miraheze.org/nonciclopediawiki/6/60/Pinguini_di_madagascar_in_formazione.jpg',
   date:'18-08-2022',
   published:true,
   category:'pop',

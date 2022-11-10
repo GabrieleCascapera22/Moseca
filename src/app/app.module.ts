@@ -7,13 +7,21 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CanzoniComponent } from './components/canzoni/canzoni.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { CardCanzoniComponent } from './shared/card-canzoni/card-canzoni.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
-    CanzoniComponent
+    CanzoniComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    CardCanzoniComponent
 
   ],
   imports: [

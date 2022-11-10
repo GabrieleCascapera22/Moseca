@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Canzone } from 'src/app/models/Canzone.model';
 import { CanzoneService } from 'src/app/services/canzone.service';
-
+import { CardCanzoniComponent } from 'src/app/shared/card-canzoni/card-canzoni.component';
 
 @Component({
   selector: 'app-canzoni',
