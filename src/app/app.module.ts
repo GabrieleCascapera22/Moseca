@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CardCanzoniComponent } from './shared/card-canzoni/card-canzoni.component';
+import { CanzoniListComponent } from './components/canzoni/canzoni-list/canzoni-list.component';
+import { TestoComponent } from './components/canzoni/testo/testo.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { CardCanzoniComponent } from './shared/card-canzoni/card-canzoni.compone
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    CardCanzoniComponent
+    CardCanzoniComponent,
+    CanzoniListComponent,
+    TestoComponent
 
   ],
   imports: [

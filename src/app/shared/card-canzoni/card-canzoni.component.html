@@ -6,7 +6,9 @@
           <p class="card-text-author"><strong>canzone:</strong> {{canzone.author}}</p>
           <p class="card-text-category"><strong>categoria:</strong> {{canzone.category}}</p>
           <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
-          <a href="#" class="btn btn-primary">Testo </a>
+          <div class="brando">
+            <a routerLink="testo/{{canzone._id}}" class="btn btn-primary">Testo</a>
+          </div>
         </div>
       </div>
 </div>

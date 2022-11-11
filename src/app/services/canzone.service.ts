@@ -12,4 +12,9 @@ export class CanzoneService {
   getCanzoni():Observable<Canzone[]>{
     return of (CANZONI);
   }
+
+  getCanzone(id:number):Observable<Canzone | undefined>{
+    const canzone= CANZONI.find(canzone =>canzone._id === id);
+    return of (canzone);
+  }
 }

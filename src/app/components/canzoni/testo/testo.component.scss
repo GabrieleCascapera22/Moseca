@@ -1,0 +1,50 @@
+.container-fluid{
+  height: 400px;
+  .container-sm-image{
+    margin-top: -19px;
+    height: 400px;
+    width: 70%;
+    background-position: center;
+    background-size: cover;
+    float: left;
+  }
+  .container-seconda-imagine{
+    height: 199px;
+    margin-top: -19px;
+    margin-right: -1px;
+    margin-bottom: 1px;
+  width: 30%;
+  float: right;
+  }
+  .container-terza-imagine{
+    height: 199px;
+    margin-top: 1px;
+    margin-right: -1px;
+  width: 30%;
+  float: right;
+  display: block;
+  }
+ }
+
+
+ .container-testo-canzone{
+  margin-top: -17px;
+  .container-fascia{
+    background-color:  #A50B5E!important;
+    height: 35px;
+    .titolo-fascia{
+      position: relative;
+      top: 5px;
+      color: white;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 20px;
+      font-weight: 200;
+      margin-left: 20px!important;
+    }
+  }
+
+  .testo-scritto{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+ }

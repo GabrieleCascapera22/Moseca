@@ -24,7 +24,6 @@ h3{
 }
 
 section{
-height: 270px;
 
   .fascia{
     background-color:  #A50B5E!important;
@@ -49,8 +48,6 @@ footer{
   height: 60px;
   background-color:  #A50B5E!important;//#73338
 }
-
-
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
