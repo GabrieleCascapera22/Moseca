@@ -1,0 +1,35 @@
+<div class="container-sm registrazione col-12">
+  <div class="row">
+    <div class="col-6" [ngStyle]="{ 'background-image': 'url(https://wallpaperaccess.com/full/1891198.jpg)'}" id="immagine" alt="immagine musica"></div>
+    <form class="col-6" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2>Registrati</h2>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="nome" name="name" placeholder="scrivi il tuo nome" formControlName="name">
+        <label for="nome" class="form-label"> il tuo nome</label>
+        <p class="help is-danger" *ngIf="!form.get('name').valid && form.get('name').touched"></p>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="cognome" name="cognome" placeholder="scrivi il tuo cognome" formControlName="cognome">
+        <label for="cognome" class="form-label"> il tuo cognome</label>
+        <p class="help is-danger" *ngIf="!form.get('cognome').invalid && form.get('cognome').touched"></p>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="email" name="email" placeholder="scrivi la tua email" formControlName="email">
+        <label for="email" class="form-label"> la tua email</label>
+        <p class="help is-danger" *ngIf="form.get('email').invalid && form.get('email').touched"></p>
+      </div>
+      <div class="mb-3">
+        <p-password [toggleMask]="true" class="form-control"  id="password"
+        name="password" formControlName="password" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"></p-password>
+      <label for="password" class="form-label">la tua Password</label>
+        <p class="help is-danger" *ngIf="form.get('password').invalid && form.get('password').touched"></p>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="accetto" name="accetto" formControlName="accetto">
+        <label class="form-check-label" for="accetto">dichiaro di accettare i termini di servizio</label>
+        <p class="help is-danger" *ngIf="form.get('accetto').invalid && form.get('accetto').touched"></p>
+      </div>
+      <div class="bottone">
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">registrati</button>
+      </div>
+    </form>

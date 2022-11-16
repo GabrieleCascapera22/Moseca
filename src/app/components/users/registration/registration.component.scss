@@ -1,0 +1,57 @@
+.registrazione{
+  margin-bottom: 20px;
+  border: solid #A50B5E;
+  border-radius: 20px;
+  form{
+    margin-top: 40px;
+    padding-left:100px ;
+    margin-bottom: 40px;
+  }
+#nome{
+  margin-top: 10px;
+  width: 80%;
+}
+#cognome{
+  width: 80%;
+}
+#email{
+  width: 80%;
+}
+#password{
+  width: 80%;
+}
+
+#immagine{
+  background-position: center;
+  background-size: cover;
+  border-radius: 0px 18px 18px 0px;
+  margin-right: -2px;
+
+}
+.bottone{
+margin-left: 30%;
+  .btn-primary{
+    background-color:  #A50B5E!important;
+    border:  #A50B5E!important;
+    border-radius: 20px;
+  }
+}
+h2{
+  color:  #A50B5E!important;
+}
+}
+
+
+
+
+
+
+
+
+
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+input.ng-valid{
+  border: 2px solid rgb(0, 255, 0);
+}

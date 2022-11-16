@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {PasswordModule} from 'primeng/password';
+import { DividerModule } from "primeng/divider";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { CascadeSelectModule } from "primeng/cascadeselect";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +19,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CardCanzoniComponent } from './shared/card-canzoni/card-canzoni.component';
 import { CanzoniListComponent } from './components/canzoni/canzoni-list/canzoni-list.component';
 import { TestoComponent } from './components/canzoni/testo/testo.component';
+import { CategoriaComponent } from './components/categoria/categoria.component';
+import { RegistrationComponent } from './components/users/registration/registration.component';
 
 
 @NgModule({
@@ -25,14 +33,22 @@ import { TestoComponent } from './components/canzoni/testo/testo.component';
     FooterComponent,
     CardCanzoniComponent,
     CanzoniListComponent,
-    TestoComponent
+    TestoComponent,
+    CategoriaComponent,
+    RegistrationComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PasswordModule,
+    DividerModule,
+    BrowserAnimationsModule,
+    CascadeSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

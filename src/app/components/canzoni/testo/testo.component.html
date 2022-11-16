@@ -1,7 +1,10 @@
+
+<section *ngIf="canzone.images else oneImage" >
 <div class="container-fluid">
-<div class="container-sm-image" [ngStyle]="{ 'background-image': 'url(' + canzone.image + ')' }"></div>
-<div class="container-seconda-imagine" [ngStyle]="{ 'background-image': 'url(' + canzone.image + ')' }"></div>
-<div class="container-terza-imagine" [ngStyle]="{ 'background-image': 'url(' + canzone.image + ')' }"></div>
+  <div class="container-sm-image" [ngStyle]="{ 'background-image': 'url(' + canzone.image + ')' }"></div>
+    <div class="container-seconda-imagine" [ngStyle]="{ 'background-image': 'url(' + canzone.images[0] + ')' }"></div>
+    <div class="container-terza-imagine" [ngStyle]="{ 'background-image': 'url(' + canzone.images[1] + ')' }"></div>
+    <div class="container-quarta-imagine" [ngStyle]="{ 'background-image': 'url(' + canzone.images[2] + ')' }"></div>
 </div>
 <div class="container-testo-canzone">
 <div class="container-fascia">
@@ -11,4 +14,16 @@
 <p>{{canzone.text}}</p>
 </div>
 </div>
+</section>
+
+<ng-template #oneImage>
+ <div class="container-fluid-one-image">
+  <div class="container-one-image" [ngStyle]="{ 'background-image': 'url(' + canzone.image + ')' }"></div>
+  <div class="fascia-one-image">
+    <p class="titolo-fascia-one-image">titolo:{{canzone.title}}</p>
+  </div>
+  <div class="container-testo-one-image"> <h2>{{canzone.text}}</h2></div>
+ </div>
+
+  </ng-template>
 

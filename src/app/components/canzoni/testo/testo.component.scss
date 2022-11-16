@@ -1,5 +1,7 @@
 .container-fluid{
   height: 400px;
+  display: contents;
+  padding-right: -10px;
   .container-sm-image{
     margin-top: -19px;
     height: 400px;
@@ -7,28 +9,47 @@
     background-position: center;
     background-size: cover;
     float: left;
+    padding-left: -10px;
   }
   .container-seconda-imagine{
     height: 199px;
     margin-top: -19px;
-    margin-right: -1px;
     margin-bottom: 1px;
-  width: 30%;
-  float: right;
+    margin-left: 1px;
+     width: 15%;
+     float: left;
+  background-position: center;
+  background-size: cover;
   }
   .container-terza-imagine{
     height: 199px;
+    margin-top: -19px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    margin-right: -10px;
+  width: 15%;
+  float: left;
+  background-position: center;
+  background-size: cover;
+  }
+
+  .container-quarta-imagine{
+    height: 199px;
+    margin-left: 1px;
     margin-top: 1px;
-    margin-right: -1px;
+    margin-right: -10px;
   width: 30%;
-  float: right;
-  display: block;
+  float: left;
+  background-position: center;
+  background-size: cover;
   }
  }
 
 
  .container-testo-canzone{
-  margin-top: -17px;
+  display: block;
+  float: left;
+  margin-top: 1px;
   .container-fascia{
     background-color:  #A50B5E!important;
     height: 35px;
@@ -44,7 +65,46 @@
   }
 
   .testo-scritto{
+    text-align: center;
+    font-size: 25px;
     margin-left: 20px;
     margin-right: 20px;
   }
+ }
+
+ .container-fluid-one-image{
+ display: contents;
+ opacity: 1;
+ z-index: -1;
+  .container-one-image{
+    margin-top: -19px;
+    margin-bottom: 1px;
+    background-size: cover;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .fascia-one-image{
+    height: 35px;
+    background-color: #A50B5E;
+    .titolo-fascia-one-image{
+      color: white;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 20px;
+      font-weight: 200;
+      margin-left: 20px!important;
+      padding-top: 5px;
+    }
+  }
+  .container-testo-one-image{
+
+    h2{
+      font-size: 25px;
+      color: black;
+      text-align: center;
+    }
+
+  }
+
  }

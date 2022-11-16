@@ -1,7 +1,7 @@
 .container-cards {
   display: block;
   margin-bottom: 20px;
-  height: 285vh;
+
   margin-left: 20px;
 
 
@@ -11,8 +11,8 @@
     float: left;//
     margin-bottom: 20px;
     border-color: #A50B5E;
-    border-radius: 20px 20px 20px 20px;
-    border-width: 2px;
+    border-radius: 29px 29px 20px 20px;
+    border-width: 4px;
   }
 
   .card-image {
@@ -20,7 +20,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 25px 25px 0px 0px;
   border-color: #A50B5E;
   border-width: 2px!important;
   }
@@ -47,7 +47,7 @@
     --bs-btn-disabled-bg: #A50B5E!important;
     --bs-btn-disabled-border-color: #A50B5E!important;
     margin-top: 20px;
-    width: 344px;
+    width: 340px;
     margin-left: -18px;
     margin-bottom: -20px;
     border-radius: 0px 0px 20px 20px;
@@ -58,3 +58,97 @@
    }
   }
   }
+
+.container-pop{
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+  .pop-card{
+    width: 23%!important;
+    margin-left: 1.2%;
+    float: left;//
+    margin-bottom: 20px;
+    border-color: #4F86F7	;
+    border-radius: 29px 29px 20px 20px;
+    border-width: 4px;
+  }
+
+  .pop-image{
+    height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px 25px 0px 0px;
+  border-color: #4F86F7	;
+  border-width: 2px!important;
+  }
+
+  .pop-title{
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    font-size: 16px;
+    color:  #4F86F7	!important;
+  }
+
+  .pop-button{
+   border-color: #4F86F7;
+   background-color: #4F86F7;
+    color: #fff;
+    margin-top: 20px;
+    width: 340px;
+    margin-left: -18px;
+    margin-bottom: -20px;
+    border-radius: 0px 0px 20px 20px;
+  }
+  .pop-body{
+    p{
+      margin-bottom: -1px;
+       }
+  }
+}
+
+.container-rap{
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  .rap-card{
+    width: 23%!important;
+    margin-left: 1.2%;
+    float: left;//
+    margin-bottom: 20px;
+    border-color: #652DC1	;
+    border-radius: 29px 29px 20px 20px;
+    border-width: 4px;
+  }
+  .rap-image{
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px 25px 0px 0px;
+    border-color: #652DC1	;
+    border-width: 2px!important;
+  }
+  .rap-title{
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    font-size: 16px;
+    color:  #652DC1	!important;
+  }
+  .rap-button{
+    border-color: #652DC1;
+    background-color: #652DC1;
+     color: #fff;
+     margin-top: 20px;
+     width: 340px;
+     margin-left: -18px;
+     margin-bottom: -20px;
+     border-radius: 0px 0px 20px 20px;
+  }
+  .rap-body{
+    p{
+      margin-bottom: -1px;
+       }
+  }
+}
