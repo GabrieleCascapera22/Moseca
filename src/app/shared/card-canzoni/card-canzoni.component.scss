@@ -59,11 +59,27 @@
   }
   }
 
-.container-pop{
-  display: block;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  .container-pop {
+    background-color: #4f86f74f;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -20px;
+    padding-top: 40px;
+  text-align: center;
 
+    .lista-canzoni-pop{
+      margin-bottom: 20px;
+      border-radius: 60px;
+
+      .titolo{
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
   .pop-card{
     width: 23%!important;
     margin-left: 1.2%;
@@ -96,7 +112,7 @@
    background-color: #4F86F7;
     color: #fff;
     margin-top: 20px;
-    width: 340px;
+    width: 344px;
     margin-left: -18px;
     margin-bottom: -20px;
     border-radius: 0px 0px 20px 20px;
@@ -109,9 +125,24 @@
 }
 
 .container-rap{
-  display: block;
-  margin-bottom: 20px;
-  margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #652dc17a;
+    margin-top: -20px;
+    padding-top: 40px;
+  text-align: center;
+    .lista-canzoni-rap{
+      margin-bottom: 20px;
+      border-radius: 60px;
+
+      .titolo{
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
   .rap-card{
     width: 23%!important;
     margin-left: 1.2%;
@@ -141,7 +172,7 @@
     background-color: #652DC1;
      color: #fff;
      margin-top: 20px;
-     width: 340px;
+     width: 344px;
      margin-left: -18px;
      margin-bottom: -20px;
      border-radius: 0px 0px 20px 20px;

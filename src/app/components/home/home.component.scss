@@ -1,0 +1,35 @@
+#dati-utente {
+  position: absolute;
+  top: 35%;
+  width: 30%;
+  height: 250px;
+  background-color: white;
+  margin-left: 35%;
+  padding: 36px;
+  border: 9px solid #A50B5E !important;
+  border-radius: 100%;
+  box-sizing: border-box;
+  text-align: center;
+
+  h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 5px;
+  }
+
+  ul{
+    text-align: center;
+    list-style: none;
+  }
+
+  // .btn-btn-primary{
+  //   margin: auto;
+  //   display: block;
+  //   width: 25%;
+  //   padding: 10px;
+  //   background-color: #A50B5E;
+  //   border: #A50B5E;
+  //   color: white;
+  //   border-radius: 20px;
+  // }
+}

@@ -14,6 +14,9 @@
       </div>
 </div>
 <div class="container-pop" *ngIf="wantedCategory ==='pop'">
+  <div class="container lista-canzoni-pop">
+    <h2 class="titolo">lista delle canzoni pop disponibili</h2>
+   </div>
   <div class="card pop-card" style="width: 18rem;" *ngFor="let canzone of canzoniFilter; let i = index">
     <div class="card-image pop-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
     <div class="card-body pop-body">
@@ -22,7 +25,7 @@
       <p class="card-text-category "><strong>categoria:</strong> {{canzone.category}}</p>
       <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
       <div class="brando">
-        <a routerLink="testo/{{canzone._id}}" class="btn btn-primary pop-button">Testo</a>
+        <a routerLink="/canzoni/testo/{{canzone._id}}" class="btn btn-primary pop-button">Testo</a>
       </div>
     </div>
   </div>
@@ -30,6 +33,9 @@
 </div>
 
 <div class="container-rap" *ngIf="wantedCategory ==='rap'">
+ <div class="container lista-canzoni-rap">
+  <h2 class="titolo">lista delle canzoni rap disponibili</h2>
+ </div>
   <div class="card rap-card" style="width: 18rem;" *ngFor="let canzone of canzoniFilter; let i = index">
     <div class="card-image rap-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
     <div class="card-body rap-body">
@@ -38,7 +44,7 @@
       <p class="card-text-category "><strong>categoria:</strong> {{canzone.category}}</p>
       <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
       <div class="brando">
-        <a routerLink="testo/{{canzone._id}}" class="btn btn-primary rap-button">Testo</a>
+        <a routerLink="/canzoni/testo/{{canzone._id}}" class="btn btn-primary rap-button">Testo</a>
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {PasswordModule} from 'primeng/password';
 import { DividerModule } from "primeng/divider";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { CascadeSelectModule } from "primeng/cascadeselect";
+import { HttpClientModule } from "@angular/common/http";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +21,19 @@ import { CanzoniListComponent } from './components/canzoni/canzoni-list/canzoni-
 import { TestoComponent } from './components/canzoni/testo/testo.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { RegistrationComponent } from './components/users/registration/registration.component';
+
+
+
+import { AutoCompleteModule } from "primeng/autocomplete";
+import { CalendarModule } from "primeng/calendar";
+import { ChipsModule } from "primeng/chips";
+import { DropdownModule } from "primeng/dropdown";
+import { InputMaskModule } from "primeng/inputmask";
+import { InputNumberModule } from "primeng/inputnumber";
+import { CascadeSelectModule } from "primeng/cascadeselect";
+import { MultiSelectModule } from "primeng/multiselect";
+import { InputTextareaModule } from "primeng/inputtextarea";
+import { InputTextModule } from "primeng/inputtext";
 
 
 @NgModule({
@@ -48,7 +61,21 @@ import { RegistrationComponent } from './components/users/registration/registrat
     PasswordModule,
     DividerModule,
     BrowserAnimationsModule,
-    CascadeSelectModule
+    DropdownModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    AutoCompleteModule,
+    FormsModule,
+    HttpClientModule,
+    CalendarModule,
+    ChipsModule,
+    InputMaskModule,
+    InputNumberModule,
+    CascadeSelectModule,
+    MultiSelectModule,
+    InputTextareaModule,
+    InputTextModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

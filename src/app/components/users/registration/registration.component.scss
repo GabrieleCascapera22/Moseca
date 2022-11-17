@@ -1,45 +1,85 @@
-.registrazione{
+.registrazione {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
   border: solid #A50B5E;
   border-radius: 20px;
-  form{
+
+  form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 40px;
-    padding-left:100px ;
+    padding-left: 100px;
     margin-bottom: 40px;
   }
-#nome{
-  margin-top: 10px;
-  width: 80%;
-}
-#cognome{
-  width: 80%;
-}
-#email{
-  width: 80%;
-}
-#password{
-  width: 80%;
-}
 
-#immagine{
-  background-position: center;
-  background-size: cover;
-  border-radius: 0px 18px 18px 0px;
-  margin-right: -2px;
+  #nome {
+    border: 1px solid #A50B5E !important;
+    border-radius: 10px;
+    margin-left: -25px !important;
+    width: 430px !important;
+  }
 
-}
-.bottone{
-margin-left: 30%;
-  .btn-primary{
-    background-color:  #A50B5E!important;
-    border:  #A50B5E!important;
-    border-radius: 20px;
+  #cognome {
+    border: 1px solid #A50B5E !important;
+    border-radius: 10px;
+    margin-left: -25px !important;
+    width: 430px !important;
+  }
+
+  #email {
+    margin-top: -4px !important;
+    border: 1px solid #A50B5E !important;
+    border-radius: 10px;
+    margin-left: -25px !important;
+    width: 430px !important;
+  }
+
+  #password {
+    border: 1px solid #A50B5E !important;
+    border-radius: 10px;
+    margin-left: -25px !important;
+    width: 430px;
+  }
+
+  #immagine {
+    background-position: center;
+    background-size: cover;
+    border-radius: 18px 0px 0px 18px;
+    margin-right: -2px;
+    border-right: solid #A50B5E;
+
+  }
+
+  .bottone {
+    margin-left: 50%;
+
+    .btn-primary {
+      background-color: #A50B5E !important;
+      border: #A50B5E !important;
+      border-radius: 20px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 150px !important;
+    color: #A50B5E !important;
+  }
+
+  .form-label {
+    margin-left: -24px !important;
+  }
+
+  .form-select {
+    width: 430px;
+    border: 1px solid #A50B5E !important;
+    border-radius: 10px;
+    margin-left: -13px !important;
   }
 }
-h2{
-  color:  #A50B5E!important;
-}
-}
 
 
 
@@ -49,9 +89,10 @@ h2{
 
 
 
-input.ng-invalid.ng-touched{
+input.ng-invalid.ng-touched {
   border: 2px solid red;
 }
-input.ng-valid{
+
+input.ng-valid {
   border: 2px solid rgb(0, 255, 0);
 }
