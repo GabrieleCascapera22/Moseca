@@ -6,6 +6,7 @@ import {PasswordModule} from 'primeng/password';
 import { DividerModule } from "primeng/divider";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
+import { NgbCollapse, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +35,7 @@ import { CascadeSelectModule } from "primeng/cascadeselect";
 import { MultiSelectModule } from "primeng/multiselect";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { InputTextModule } from "primeng/inputtext";
+import { NuovaCanzoneComponent } from './components/nuova-canzone/nuova-canzone.component';
 
 
 @NgModule({
@@ -48,7 +50,8 @@ import { InputTextModule } from "primeng/inputtext";
     CanzoniListComponent,
     TestoComponent,
     CategoriaComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    NuovaCanzoneComponent
 
   ],
   imports: [
@@ -74,7 +77,9 @@ import { InputTextModule } from "primeng/inputtext";
     CascadeSelectModule,
     MultiSelectModule,
     InputTextareaModule,
-    InputTextModule
+    InputTextModule,
+    NgbCollapseModule,
+    HttpClientModule
 
   ],
   providers: [],

@@ -23,7 +23,7 @@ export class TestoComponent implements OnInit {
   }
 
   onGetCanzone(): void{
-    const id = Number(this.ActivatedRoute.snapshot.paramMap.get('_id'));
+    const id = String(this.ActivatedRoute.snapshot.paramMap.get('_id'));
     this.canzoneService.getCanzone(id).subscribe({
       next:(res) =>{this.canzone=res},
       error :(e) =>{console.error(e)}

@@ -1,7 +1,9 @@
 header{
+  display: flex;
   background-color:  #A50B5E!important;//#73338
 padding-left: 25px;
 margin-bottom: 20px;
+
 
 .bg-light{
   background-color: #A50B5E!important;
@@ -23,7 +25,7 @@ span{
 }
 
 .form-inline-my-2-my-lg-0{
-margin-left:40%;
+margin-left:30%;
   .form-control-mr-sm-2{
     border: #A50B5E!important;
     border-bottom-left-radius: 18px;
@@ -44,6 +46,24 @@ margin-left:40%;
     border-radius: 100%;
     margin-left: 10px;
     }
+}
+.collapse {
+  color: white;
+  .bottone-genere{
+    color: white;
+    margin-left: 25px;
+  }
+}
+
+nav{
+  width: 100%;
+}
+
+#navbar{
+  display: flex;
+}
+#nuovaCanzone{
+  margin-left: 60px;
 }
 
 }

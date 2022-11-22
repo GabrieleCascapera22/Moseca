@@ -29,26 +29,14 @@ export class HomeComponent implements OnInit {
   riceviDatiUtente(){
 
     this.userService.datiUtente.subscribe((res: any) =>{
-      localStorage.setItem("nome",res.nome);
-      localStorage.setItem("cognome",res.cognome);
-      localStorage.setItem("email",res.email);
-      localStorage.setItem("categoriaPreferita",res.categoriaPreferita);
+    this.nome=res.nome;
+    this.cognome=res.cognome;
+    this.categoriaPreferita=res.categoriaPreferita;
+    this.email=res.email;
     })
-
-    if(localStorage.getItem('nome'))
-  {
-    this.nome=localStorage.getItem('nome');
-    this.cognome=localStorage.getItem('cognome');
-    this.categoriaPreferita=localStorage.getItem('categoriaPreferita');
-    this.email=localStorage.getItem('email');
-  }
   }
 
   closeModal(){
-    localStorage.removeItem("nome");
-    localStorage.removeItem("cognome");
-    localStorage.removeItem("email");
-    localStorage.removeItem("categoriaPreferita");
     this.email='';
     this.nome='';
     this.cognome='';

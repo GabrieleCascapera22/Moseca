@@ -1,13 +1,16 @@
 <app-carousel></app-carousel>
   <ng-template [ngIf]="nome">
-    <div id="dati-utente" (click)="closeModal()">
-      <h2> Ecco i tuoi dati:</h2>
-   <ul>
-     <li>nome: <strong>{{nome}}</strong></li>
-     <li> cognome: <strong>{{cognome}}</strong> </li>
-     <li> email: <strong>{{email}}</strong> </li>
-     <li> categoria preferita: <strong>{{categoriaPreferita}}</strong> </li>
-   </ul>
+    <div class="contenitore-scuro">
+      <div id="dati-utente" (click)="closeModal()">
+        <h2> Ecco i tuoi dati:</h2>
+     <ul>
+       <li>nome: <strong>{{nome}}</strong></li>
+       <li> cognome: <strong>{{cognome}}</strong> </li>
+       <li> email: <strong>{{email}}</strong> </li>
+       <li> categoria preferita: <strong>{{categoriaPreferita}}</strong> </li>
+     </ul>
+      </div>
     </div>
+
 
  </ng-template>

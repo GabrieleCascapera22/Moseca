@@ -1,0 +1,92 @@
+<div class="container-sm nuova-canzone col-10">
+  <div class="row" id="contenitore-row">
+    <form class="col-8" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2     id="nuova-canzone">Nuova Canzone</h2>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" id="autore" name="autore" placeholder="scrivi il nome del' autore"
+          formControlName="author" />
+        <label for="autore" class="form-label">author</label>
+        <p class="help is-danger" *ngIf="!form.get('title').valid && form.get('title').touched">
+          il campo è obbligatorio
+        </p>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" id="titolo" name="titolo" placeholder="scrivi il titolo della canzone"
+          formControlName="title" />
+        <label for="titolo" class="form-label"> titolo</label>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" id="testo" name="testo" placeholder="scrivi il testo della canzone"
+          formControlName="text" />
+        <label for="testo" class="form-label">testo della canzone</label>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" id="img" name="immagine" placeholder="inserisci l'indirizzo dell'immagine"
+          formControlName="image" />
+        <label for="immagine" class="form-label">indirizzo dell'immagine</label>
+      </div>
+
+      <div class="mb-3">
+
+        <select class="form-select" aria-label="Default select example" name="categoria" formControlName="category">
+          <option value="pop">pop</option>
+          <option value="rap">rap</option>
+          <option value="trap">trap</option>
+          <option value="rock">rock</option>
+          <option value="lirica">lirica</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3 form-check" id="checkBox">
+        <input type="checkbox" class="form-check-input" id="published" name="published" formControlName="published" />
+        <label class="form-check-label" for="published">publicazione canzone</label>
+      </div>
+
+      <div class="bottone">
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid" >
+          crea Canzone
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+</div>
+<!-- <ng-template [ngIf]="modal">
+  <div id="contenitore-globale">
+    <div class="contieni-card-congratulazioni">
+      <div class="congratulazioni">
+        <h2>Congratulazioni la tua ricetta è stata inserita</h2>
+      </div>
+      <div class="container-card">
+        <div class="card">
+          <div class="card-image" [ngStyle]=" {'background-image': 'url(' + form.value.image +')'}"> </div>
+          <div class="card-body">
+            <h5 class="card-title">{{form.value.title}}</h5>
+            <p class="card-text">{{form.value.description | slice: 0:250}}...</p>
+            [router-link]="'dettaglio/'+recipe.title+'/'+recipe._id">dettaglio  -->
+
+            <!-- </div>
+        </div>
+       </div>
+
+  <button class="btn bottone-nuova" cursor="pointer" (click)="nuovaRicetta()">nuova ricetta</button>
+  <button class="btn croce" cursor="pointer" (click)="vaiRicette()">
+    <i class="pi pi-times-circle"></i>
+  </button>
+  </div>
+
+
+    </div>
+
+
+
+</ng-template> --> -->

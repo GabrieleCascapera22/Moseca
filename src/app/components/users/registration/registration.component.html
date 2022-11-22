@@ -10,16 +10,14 @@
         <div class="p-field p-col-12 p-md-4">
           <span class="p-float-label">
         <input type="text" class="form-control" id="nome" name="name" placeholder="scrivi il tuo nome" formControlName="name" pInputText>
-        <label for="nome" class="form-label"> il tuo nome</label>
-        <p class="help is-danger" *ngIf="!form.get('name').valid && form.get('name').touched"></p>
+        <label for="nome" class="form-label"> campo obbligatorio</label>
       </span>
       </div>
       <!-- <div class="mb-3"> -->
         <div class="p-field p-col-12 p-md-4">
           <span class="p-float-label">
         <input type="text" class="form-control" id="cognome" name="cognome" placeholder="scrivi il tuo cognome" formControlName="cognome" pInputText>
-        <label for="cognome" class="form-label"> il tuo cognome</label>
-        <p class="help is-danger" *ngIf="!form.get('cognome').invalid && form.get('cognome').touched"></p>
+        <label for="cognome" class="form-label">campo </label>
       </span>
       </div>
       <!-- <div class="mb-3"> -->
@@ -27,7 +25,6 @@
           <span class="p-float-label">
         <input type="email" class="form-control" id="email" name="email" placeholder="scrivi la tua email" formControlName="email" pInputText>
         <label for="email" class="form-label"> la tua email</label>
-        <p class="help is-danger" *ngIf="form.get('email').invalid && form.get('email').touched"></p>
       </span>
       </div>
       <div class="container tendina">
@@ -41,13 +38,11 @@
         <p-password [toggleMask]="true" class="form-control"  id="password"
         name="password" formControlName="password" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"></p-password>
       <label for="password" class="form-label">la tua Password</label>
-        <p class="help is-danger" *ngIf="form.get('password').invalid && form.get('password').touched"></p>
       </span>
       </div>
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="accetto" name="accetto" formControlName="accetto">
         <label class="form-check-label" for="accetto">dichiaro di accettare i termini di servizio</label>
-        <p class="help is-danger" *ngIf="form.get('accetto').invalid && form.get('accetto').touched"></p>
       </div>
       <div class="bottone">
         <button type="submit" class="btn btn-primary" [disabled]="!form.valid">registrati</button>

@@ -20,6 +20,8 @@ export class HeaderComponent implements OnInit {
   musica=faMusic;
   penna=faPen;
   disco=faCompactDisc;
+  isCollapsed = true;
+  vinyl = faRecordVinyl;
 
 
 
@@ -28,4 +30,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }
+
+

@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+ generi=['rap','rock','pop','trap','lirica'];
+
   form = new FormGroup({
     name: new FormControl('',[Validators.required]),
     cognome: new FormControl('',[Validators.required]),
@@ -21,7 +23,6 @@ export class RegistrationComponent implements OnInit {
     accetto: new FormControl('',[Validators.requiredTrue])
   })
 
-  generi=['pop','rap','rock','lirica','leggera'];
 
   constructor(private userService:UserService,private router: Router) {}
 

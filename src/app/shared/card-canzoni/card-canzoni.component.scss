@@ -1,8 +1,14 @@
-.container-cards {
-  display: block;
-  margin-bottom: 20px;
 
-  margin-left: 20px;
+
+.container-cards {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+
 
 
   .card {
@@ -47,7 +53,7 @@
     --bs-btn-disabled-bg: #A50B5E!important;
     --bs-btn-disabled-border-color: #A50B5E!important;
     margin-top: 20px;
-    width: 340px;
+    width: 348px;
     margin-left: -18px;
     margin-bottom: -20px;
     border-radius: 0px 0px 20px 20px;
@@ -70,6 +76,7 @@
   text-align: center;
 
     .lista-canzoni-pop{
+      display: block;
       margin-bottom: 20px;
       border-radius: 60px;
 
@@ -112,7 +119,7 @@
    background-color: #4F86F7;
     color: #fff;
     margin-top: 20px;
-    width: 344px;
+    width: 348px;
     margin-left: -18px;
     margin-bottom: -20px;
     border-radius: 0px 0px 20px 20px;
@@ -125,9 +132,10 @@
 }
 
 .container-rap{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
     background-color: #652dc17a;
     margin-top: -20px;
     padding-top: 40px;
@@ -172,7 +180,7 @@
     background-color: #652DC1;
      color: #fff;
      margin-top: 20px;
-     width: 344px;
+     width: 348px;
      margin-left: -18px;
      margin-bottom: -20px;
      border-radius: 0px 0px 20px 20px;
@@ -182,4 +190,117 @@
       margin-bottom: -1px;
        }
   }
+}
+
+
+
+.container-carte-pop{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-carte-rap{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 959px){
+  .container-cards{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .card{
+      width: 30%!important;
+      margin-left: 2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+  .container-carte-pop{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+    .pop-card{
+      width: 30%!important;
+      margin-left: 2%!important;
+    }
+    .pop-button{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 649px){
+  .container-cards{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .card{
+      width: 40%!important;
+      margin-left: 1.2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+
+
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+
+  .container-cards{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .card{
+      width: 80%!important;
+      margin-left: 2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+
+
+    }
+  }
+
+
+
+
+
+
 }
