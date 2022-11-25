@@ -7,7 +7,9 @@ import { DividerModule } from "primeng/divider";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
 import { NgbCollapse, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
-
+import {ToastModule} from 'primeng/toast';
+import { PaginatorModule } from 'primeng/paginator';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +37,14 @@ import { CascadeSelectModule } from "primeng/cascadeselect";
 import { MultiSelectModule } from "primeng/multiselect";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { InputTextModule } from "primeng/inputtext";
-import { NuovaCanzoneComponent } from './components/nuova-canzone/nuova-canzone.component';
+import {TableModule} from 'primeng/table';
+
+import { NuovaCanzoneComponent } from './components/canzoni/nuova-canzone/nuova-canzone.component';
+import { LoginComponent } from './components/users/login/login.component';
+import { ProfiloComponent } from './components/users/profilo/profilo.component';
+import * as moment from 'moment';
+import { RisultatoComponent } from './components/canzoni/risultato/risultato.component';
+import { AutoriComponent } from './components/autori/autori.component';
 
 
 @NgModule({
@@ -51,7 +60,11 @@ import { NuovaCanzoneComponent } from './components/nuova-canzone/nuova-canzone.
     TestoComponent,
     CategoriaComponent,
     RegistrationComponent,
-    NuovaCanzoneComponent
+    NuovaCanzoneComponent,
+    LoginComponent,
+    ProfiloComponent,
+    RisultatoComponent,
+    AutoriComponent
 
   ],
   imports: [
@@ -79,7 +92,12 @@ import { NuovaCanzoneComponent } from './components/nuova-canzone/nuova-canzone.
     InputTextareaModule,
     InputTextModule,
     NgbCollapseModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastModule,
+    PaginatorModule,
+    CKEditorModule,
+    TableModule
+
 
   ],
   providers: [],

@@ -6,22 +6,28 @@ import { TestoComponent } from './components/canzoni/testo/testo.component';
 import { CanzoniListComponent } from './components/canzoni/canzoni-list/canzoni-list.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { RegistrationComponent } from './components/users/registration/registration.component';
-import { NuovaCanzoneComponent } from './components/nuova-canzone/nuova-canzone.component';
+import { NuovaCanzoneComponent } from './components/canzoni/nuova-canzone/nuova-canzone.component';
+import { LoginComponent } from './components/users/login/login.component';
+import { ProfiloComponent } from './components/users/profilo/profilo.component';
+import { LoggedInGuard } from './components/logged-in.guard';
+import { RisultatoComponent } from './components/canzoni/risultato/risultato.component';
+import { AutoriComponent } from './components/autori/autori.component';
 
 const routes: Routes = [
 {path:'',redirectTo:'home',pathMatch:'full'},
 {path:'home',component:HomeComponent},
 {path:'categoria/:category',component:CategoriaComponent},
 {path:'registrazione',component:RegistrationComponent},
-{path:"nuova-canzone",component:NuovaCanzoneComponent},
+{path:'autori',component:AutoriComponent},
 
 {path:'canzoni',component:CanzoniComponent,children:[
 {path:'testo/:_id',component:TestoComponent},
+{path:'risultato',component:RisultatoComponent},
+{path:"nuova-canzone",component:NuovaCanzoneComponent,canActivate: [LoggedInGuard]},
 {path:'',pathMatch:'full',component:CanzoniListComponent}
 ]},
-
-
-
+{path:'login',component:LoginComponent},
+{path:'profilo',component:ProfiloComponent,canActivate: [LoggedInGuard]},
 {path:'**',redirectTo:'home'}
 
 ];

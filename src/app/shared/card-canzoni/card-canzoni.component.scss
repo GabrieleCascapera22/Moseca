@@ -192,7 +192,188 @@
   }
 }
 
+.container-rock{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+    background-color: #778899;
+    margin-top: -20px;
+    padding-top: 40px;
+  text-align: center;
+    .lista-canzoni-rock{
+      margin-bottom: 20px;
+      border-radius: 60px;
 
+      .titolo{
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+  .rock-card{
+    width: 23%!important;
+    margin-left: 1.2%;
+    float: left;//
+    margin-bottom: 20px;
+    border-color: black	;
+    border-radius: 29px 29px 20px 20px;
+    border-width: 4px;
+  }
+  .rock-image{
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px 25px 0px 0px;
+    border-color: black	;
+    border-width: 2px!important;
+  }
+  .rock-title{
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    font-size: 16px;
+    color:  black	!important;
+  }
+  .rock-button{
+    border-color: black;
+    background-color: black;
+     color: #fff;
+     margin-top: 20px;
+     width: 348px;
+     margin-left: -18px;
+     margin-bottom: -20px;
+     border-radius: 0px 0px 20px 20px;
+  }
+  .rock-body{
+    p{
+      margin-bottom: -1px;
+       }
+  }
+}
+
+.container-trap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+    background-color: #33cc9970;
+    margin-top: -20px;
+    padding-top: 40px;
+  text-align: center;
+    .lista-canzoni-trap{
+      margin-bottom: 20px;
+      border-radius: 60px;
+
+      .titolo{
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+  .trap-card{
+    width: 23%!important;
+    margin-left: 1.2%;
+    float: left;//
+    margin-bottom: 20px;
+    border-color: #00755E	;
+    border-radius: 29px 29px 20px 20px;
+    border-width: 4px;
+  }
+  .trap-image{
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px 25px 0px 0px;
+    border-color: #00755E	;
+    border-width: 2px!important;
+  }
+  .trap-title{
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    font-size: 16px;
+    color:  #00755E	!important;
+  }
+  .trap-button{
+    border-color: #00755E;
+    background-color: #00755E;
+     color: #fff;
+     margin-top: 20px;
+     width: 348px;
+     margin-left: -18px;
+     margin-bottom: -20px;
+     border-radius: 0px 0px 20px 20px;
+  }
+  .trap-body{
+    p{
+      margin-bottom: -1px;
+       }
+  }
+}
+
+.container-lirica{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+    background-color: #ffae42b0;
+    margin-top: -20px;
+    padding-top: 40px;
+  text-align: center;
+    .lista-canzoni-lirica{
+      margin-bottom: 20px;
+      border-radius: 60px;
+
+      .titolo{
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+  .lirica-card{
+    width: 23%!important;
+    margin-left: 1.2%;
+    float: left;//
+    margin-bottom: 20px;
+    border-color: #FF7A00	;
+    border-radius: 29px 29px 20px 20px;
+    border-width: 4px;
+  }
+  .lirica-image{
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px 25px 0px 0px;
+    border-color: #FF7A00	;
+    border-width: 2px!important;
+  }
+  .lirica-title{
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    font-size: 16px;
+    color:  #FF7A00	!important;
+  }
+  .lirica-button{
+    border-color: #FF7A00;
+    background-color: #FF7A00;
+     color: #fff;
+     margin-top: 20px;
+     width: 348px;
+     margin-left: -18px;
+     margin-bottom: -20px;
+     border-radius: 0px 0px 20px 20px;
+  }
+  .lirica-body{
+    p{
+      margin-bottom: -1px;
+       }
+  }
+}
 
 .container-carte-pop{
     width: 100%;
@@ -208,7 +389,28 @@
   justify-content: center;
 }
 
-@media only screen and (min-width: 650px) and (max-width: 959px){
+.container-carte-rock{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container-carte-trap{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container-carte-lirica{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1520px){
   .container-cards{
     justify-content: center;
     align-content: center;
@@ -228,6 +430,7 @@
     border-radius: 4px !important;
     }
   }
+
   .container-carte-pop{
     justify-content: center;
     align-content: center;
@@ -246,7 +449,85 @@
     border-radius: 4px !important;
     }
   }
+
+  .container-carte-rap{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+    .rap-card{
+      width: 30%!important;
+      margin-left: 2%!important;
+    }
+    .rap-button{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-rock{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+    .rock-card{
+      width: 30%!important;
+      margin-left: 2%!important;
+    }
+    .rock-button{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-trap{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+    .trap-card{
+      width: 30%!important;
+      margin-left: 2%!important;
+    }
+    .trap-button{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-lirica{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+    .lirica-card{
+      width: 30%!important;
+      margin-left: 2%!important;
+    }
+    .lirica-button{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
 }
+
 
 @media only screen and (min-width: 481px) and (max-width: 649px){
   .container-cards{
@@ -266,11 +547,108 @@
     margin-left: 0px!important;
     margin-bottom: 0px!important;
     border-radius: 4px !important;
-
-
     }
   }
 
+  .container-carte-pop{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .pop-card{
+      width: 40%!important;
+      margin-left: 1.2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-rap{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .rap-card{
+      width: 40%!important;
+      margin-left: 1.2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-trap{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .trap-card{
+      width: 40%!important;
+      margin-left: 1.2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-rock{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .rock-card{
+      width: 40%!important;
+      margin-left: 1.2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-lirica{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .lirica-card{
+      width: 40%!important;
+      margin-left: 1.2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
 
 }
 
@@ -284,7 +662,7 @@
     flex-wrap: wrap!important;
 
     .card{
-      width: 80%!important;
+      width: 100%!important;
       margin-left: 2%!important;
     }
     .btn-primary{
@@ -298,9 +676,105 @@
     }
   }
 
+  .container-carte-pop{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .pop-card{
+      width: 100%!important;
+      margin-left: 2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
 
 
+    }
+  }
 
+  .container-carte-rap{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
 
+    .rap-card{
+      width: 100%!important;
+      margin-left: 2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
 
+  .container-carte-trap{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .trap-card{
+      width: 100%!important;
+      margin-left: 2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-rock{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .rock-card{
+      width: 100%!important;
+      margin-left: 2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
+
+  .container-carte-lirica{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+
+    .lirica-card{
+      width: 100%!important;
+      margin-left: 2%!important;
+    }
+    .btn-primary{
+      display: block!important;
+      width: 100%!important;
+    margin-left: 0px!important;
+    margin-bottom: 0px!important;
+    border-radius: 4px !important;
+    }
+  }
 }

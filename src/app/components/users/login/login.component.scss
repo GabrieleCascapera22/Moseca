@@ -1,0 +1,25 @@
+form{
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+
+  button{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #A50B5E;
+    border: solid #A50B5E;
+  }
+
+}
+
+.clicca-registrazione{
+text-align: center;
+margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 959px){
+  form{
+    width: 80%!important;
+  }
+}

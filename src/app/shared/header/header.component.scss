@@ -1,5 +1,4 @@
 header{
-  display: flex;
   background-color:  #A50B5E!important;//#73338
 padding-left: 25px;
 margin-bottom: 20px;
@@ -25,8 +24,10 @@ span{
 }
 
 .form-inline-my-2-my-lg-0{
-margin-left:30%;
+
+
   .form-control-mr-sm-2{
+    margin-left: 250px;
     border: #A50B5E!important;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
@@ -45,6 +46,7 @@ margin-left:30%;
     width: 38px;
     border-radius: 100%;
     margin-left: 10px;
+
     }
 }
 .collapse {
@@ -60,10 +62,78 @@ nav{
 }
 
 #navbar{
-  display: flex;
-}
-#nuovaCanzone{
-  margin-left: 60px;
-}
 
 }
+#nuovaCanzone{
+  margin-left: 2px;
+}
+
+#name{
+  margin-left: 4px;
+}
+
+.pi-plus{
+  margin-top: 4px;
+  margin-right: 4px;
+}
+.pi-sign-out{
+  margin-top: 4px;
+  margin-left: 4px;
+}
+#esci{
+  margin-left: 10px!important;
+  margin-top: 4px!important;
+
+}
+
+#lente-barra-ricerca{
+  margin-top: 27px;
+  color: white;
+  height: 45px!important;
+ }
+
+ #loggato{
+  margin-left: -30px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 14px;
+
+  .nuova-canzone-li{
+    margin-left: 80px;
+  }
+
+ }
+
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 992px){
+#loggato{
+  margin-left: 10px;
+  display: flex!important;
+  flex-direction: column;
+  align-items: baseline!important;
+  .nuova-canzone-li{
+    margin-left: 0px!important;
+  }
+  .form-inline-my-2-my-lg-0{
+    width: 100%!important;
+
+    .form-control-mr-sm-2{
+      width: 80%!important;
+      margin-left: 0px!important;
+      border: #A50B5E!important;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      text-align: center;
+    }
+
+  }
+
+}
+}
+
+

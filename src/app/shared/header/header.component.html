@@ -4,78 +4,73 @@
       <img src="../assets/images/cuffieBianche.png" class="logo" alt="logo Moseca(jukebox)">
     <span>Moseca</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsedNav = !isCollapsedNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse" id="navbar" [ngbCollapse]="isCollapsedNav">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link"  style="color: white" routerLink="home">
+        <li class="nav-item ">
+          <a class="nav-link"  style="color: white" routerLink="home" cursor="pointer">
             <fa-icon [icon]="casetta"></fa-icon>
-            Home <span class="sr-only"></span></a>
+            Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  style="color: white">
+          <a class="nav-link"  style="color: white" id="autori" cursor="pointer" routerLink="autori">
             <fa-icon [icon]="penna"></fa-icon>
             Autori</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  style="color: white" routerLink="canzoni">
+          <a class="nav-link"  style="color: white" routerLink="canzoni" cursor="pointer">
             <fa-icon [icon]="disco"></fa-icon>
             Canzoni</a>
         </li>
-        <li class="nav-item">
-          <button class="btn"  id="navbar-collapse" type="button"  data-toggle="collapse" data-target="#collapseGeneri" aria-expanded="false" aria-controls="collapseGeneri" (click)="isCollapsed = !isCollapsed" style="color: white">
-            <fa-icon [icon]="musica"></fa-icon>
-            Generi
-          </button>
-          <!-- <div class="collapse-menu" id="collapseCategory" style="color: white">
-            <a class="dropdown-item" >Pop</a>
-            <a class="dropdown-item" >Rock</a>
-            <a class="dropdown-item" >Rap</a>
-            <a class="dropdown-item" >Lirica</a>
-            <a class="dropdown-item" >Trap</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" >Something else here</a>
-          </div> -->
-          <div class="collapse" id="collapseGeneri"[ngbCollapse]="isCollapsed">
-            <button class="btn bottone-genere" cursor="pointer" routerLink="/categoria/pop" (click)="isCollapsed = !isCollapsed" >pop</button>
-          </div>
-          <div class="collapse" id="collapseGeneri" [ngbCollapse]="isCollapsed">
-            <button class="btn bottone-genere" cursor="pointer" routerLink="/categoria/rap" (click)="isCollapsed = !isCollapsed">rap</button>
-          </div>
-          <div class="collapse" id="collapseGeneri" [ngbCollapse]="isCollapsed">
-            <button class="btn bottone-genere" cursor="pointer" routerLink="categoria/tutte/rock" (click)="isCollapsed = !isCollapsed">rock</button>
-          </div>
-          <div class="collapse" id="collapseGeneri" [ngbCollapse]="isCollapsed">
-            <button class="btn bottone-genere" cursor="pointer" routerLink="categoria/tutte/trap" (click)="isCollapsed = !isCollapsed">trap</button>
-          </div>
-          <div class="collapse" id="collapseGeneri" [ngbCollapse]="isCollapsed">
-            <button class="btn bottone-genere" cursor="pointer" routerLink="categoria/tutte/lirica" (click)="isCollapsed = !isCollapsed">lirica</button>
-          </div>
 
+        <li class="nav-item" style="display: flex; align-items: center;margin-left: 4px;">
+          <!-- <select class="form-control select" [(ngModel)]="categoriaScelta">
+            <option value="1" selected>pop</option>
+            <option value="2" (click)="goToPop()">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" >5</option>
+          </select> -->
+          <fa-icon [icon]="musica"></fa-icon>
+          <p-dropdown [options]="categorie" [(ngModel)]="categoriaScelta" placeholder="categoria" (onChange)="goTo($event)" id="dropDownNav" style="color: white"></p-dropdown>
         </li>
-        <li class="nav-item">
-          <a class="nav-link"  style="color: white" routerLink="registrazione">
+        <li class="nav-item" *ngIf="!authService.isLogged()">
+          <a class="nav-link"  style="color: white" routerLink="/login" cursor="pointer" >
             <fa-icon [icon]="utente"></fa-icon>
-          registrati
+            Accedi
           </a>
         </li>
-        <li class="nav-item" id="nuovaCanzone">
-          <a class="nav-link"  style="color: white" routerLink="nuova-canzone">
+      </ul>
+      <ul *ngIf="authService.isLogged()" id="loggato" >
+
+        <li class="nav-item ciao-utente" >
+          <a class="nav-link"  style="color: white"  routerLink="/profilo" cursor="pointer">
+            <fa-icon [icon]="utente"></fa-icon>
+            <span id="name">ciao {{user.name}}</span>
+          </a>
+        </li>
+
+        <li class="nav-item"   id="esci" >
+          <a class="nave-item nav-link" routerLink="home" (click)="logout()" style="color: white" cursor="pointer"> Esci <i class="pi pi-sign-out" style="color: white!important"></i></a>
+        </li>
+
+        <li  class="nav-item nuova-canzone-li" >
+          <a class="nav-link"  style="color: white" id="nuovaCanzone"  routerLink="/canzoni/nuova-canzone" *ngIf="user.role ==='admin'" cursor="pointer">
             <fa-icon [icon]="vinyl"></fa-icon>
             Nuova Canzone</a>
         </li>
-      </ul>
+
+
       <form class="form-inline-my-2-my-lg-0">
-        <input class="form-control-mr-sm-2" type="search" placeholder="cerca canzone" aria-label="Search">
-        <button class="btn-btn-outline-success-my-2-my-sm-0" type="submit" style="color:  #a50b5db2">
-          <span>
-            <fa-icon [icon]="lente"></fa-icon>
-          </span>
+        <input class="form-control-mr-sm-2" type="search" placeholder="cerca canzone" aria-label="Search" name="ricerca" [(ngModel)]="ricerca">
+        <button class="btn" type="submit" id="bottone-barra-ricerca" (click)="onRicerca()">
+          <i class="pi pi-search" id="lente-barra-ricerca" style="color: white!important"></i>
         </button>
       </form>
+    </ul>
     </div>
   </nav>
 

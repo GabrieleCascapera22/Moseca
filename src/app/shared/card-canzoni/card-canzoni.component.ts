@@ -2,6 +2,9 @@ import { Canzone } from './../../models/Canzone.model';
 import { Component, OnInit,Input } from '@angular/core';
 import { CanzoneService } from 'src/app/services/canzone.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PrimeNGConfig } from 'primeng/api';
+import { Event } from '@angular/router';
+
 @Component({
   selector: 'app-card-canzoni',
   templateUrl: './card-canzoni.component.html',
@@ -23,12 +26,13 @@ pagingNumber= 0;
 constructor(
     private canzoneService: CanzoneService,
     private activatedRoute:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private primengConfig: PrimeNGConfig
     ) { }
 
   ngOnInit(): void {
     this.onGetCategory();
-
+    this.primengConfig.ripple = true;
 
   }
 
@@ -42,10 +46,6 @@ constructor(
           if(this.wantedCategory)
           {
             this.canzoniFilter=this.canzoni.filter((canzone)=>canzone.category===this.wantedCategory);
-            this.pagine(this.canzoniFilter);
-
-          }else{
-            this.pagine(this.canzoni);
           }
         },
 
@@ -54,20 +54,14 @@ constructor(
     })
   }
 
-  pagine(canzoni:Canzone[]){
-    let tot;
-    if(canzoni){
-      tot =canzoni.length;
-    }
-    this.pag=1;
-    this.pagingNumber=0;
-    if(this.wantedCategory === "pop")
-    {
-      this.pagingNumber=Math.floor(tot/this.canzoniPerPagina/4);
-    }else{
-      this.pagingNumber= Math.ceil(tot/this.canzoniPerPagina/4);
-    }
 
-  }
+  paginate(event: any) {
+    event.page =event.page + 1;
+   this.pag= event.page;
+   console.log(this.canzoni);
+   console.log(this.pag);
+   console.log(event.pag);
+
+}
 
 }

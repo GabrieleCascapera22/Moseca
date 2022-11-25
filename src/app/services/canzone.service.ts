@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Canzone } from '../models/Canzone.model';
 import { CANZONI } from '../mocks/Canzone.mock';
-import { Observable,of } from 'rxjs';
+import { Observable,of,ReplaySubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class CanzoneService {
 
   apiBaseUrl="api/canzoni";
+  wantedCanzone= new ReplaySubject();
 
 
   constructor(private http:HttpClient) { }
@@ -30,5 +31,9 @@ export class CanzoneService {
   postCanzone(canzone: any): Observable<any>{
 
     return this.http.post(`${this.apiBaseUrl}/`,canzone);
+  }
+
+  searchCanzoni(text:string): Observable<Canzone[]>{
+    return this.http.get<Canzone[]>(`${this.apiBaseUrl}/cerca/${text}`);
   }
 }

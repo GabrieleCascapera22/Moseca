@@ -97,14 +97,137 @@ input.ng-valid {
   border: 2px solid rgb(0, 255, 0);
 }
 
+@media only screen and (min-width: 650px) and (max-width: 959px){
+  .registrazione{
+    .row{
+      display: flex!important;
+      flex-direction: column!important;
+      form{
+        width: 700px!important;
+        flex-direction: column;
+
+        input{
+          margin-bottom: 10px;
+        }
+
+        .tendina{
+          select{
+            margin-bottom: 10px;
+          }
+        }
+
+        h2{
+          margin-left: 0px!important;
+          text-align: start;
+        }
+      #immagine{
+        height: 0px;
+        background-size: 0px;
+      }
+      .bottone{
+        display: block;
+        margin-left: 0%!important;
+      }
+    }
+    }
+
+    }
+
+
+}
 
 @media only screen and (min-width: 481px) and (max-width: 649px){
 
+  .registrazione{
+    .row{
+      display: flex!important;
+      flex-direction: column!important;
+      form{
+        width: 700px!important;
+        flex-direction: column;
+
+        input{
+          margin-bottom: 10px;
+        }
+
+        .tendina{
+          margin-left: -25px;
+          select{
+            margin-bottom: 10px;
+          }
+        }
+
+        h2{
+          margin-left: 0px!important;
+          text-align: start;
+        }
+      #immagine{
+        height: 0px;
+        background-size: 0px;
+      }
+      .bottone{
+        display: block;
+        margin-left: 0%!important;
+      }
+    }
+    }
+
+    }
 
 }
 
 @media only screen and (min-width: 0px) and (max-width: 480px){
 
+  .registrazione{
+    .row{
+      display: flex!important;
+      flex-direction: column!important;
+      form{
+        width: 700px!important;
+        flex-direction: column;
 
+        input{
+          margin-bottom: 10px;
+        }
+        #nome{
+          width: 350px!important;
+        }
+
+        #cognome{
+          width: 350px!important;
+        }
+
+        #email{
+          width: 350px!important;
+        }
+
+        #password{
+          width: 350px!important;
+        }
+
+        .tendina{
+          margin-left: -25px;
+          select{
+            margin-bottom: 10px;
+            width: 350px!important;
+          }
+        }
+
+        h2{
+          margin-left: 0px!important;
+          text-align: start;
+        }
+      #immagine{
+        height: 0px;
+        background-size: 0px;
+      }
+      .bottone{
+        display: block;
+        margin-left: 0%!important;
+      }
+    }
+    }
+
+    }
 
 }

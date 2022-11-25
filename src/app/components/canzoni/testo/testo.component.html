@@ -1,5 +1,5 @@
 
-<section *ngIf="canzone.images else oneImage" >
+<section *ngIf="canzone.images.length>2 else oneImage" >
 <div class="container-fluid">
   <div class="container-sm-image" [ngStyle]="{ 'background-image': 'url(' + canzone.image + ')' }"></div>
     <div class="container-seconda-imagine" [ngStyle]="{ 'background-image': 'url(' + canzone.images[0] + ')' }"></div>
@@ -11,7 +11,7 @@
   <p class="titolo-fascia">titolo:{{canzone.title}}</p>
 </div>
 <div class="testo-scritto">
-<p>{{canzone.text}}</p>
+  <p><span [innerHTML]="canzone.text"></span> </p>
 </div>
 </div>
 </section>
@@ -22,7 +22,9 @@
   <div class="fascia-one-image">
     <p class="titolo-fascia-one-image">titolo:{{canzone.title}}</p>
   </div>
-  <div class="testo-one-image"> <p>{{canzone.text}}</p></div>
+  <div class="testo-one-image">
+     <p><span [innerHTML]="canzone.text"></span> </p>
+    </div>
  </div>
 
   </ng-template>

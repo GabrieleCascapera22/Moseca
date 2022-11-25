@@ -4,7 +4,7 @@
       <div class="card-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
       <div class="card-body">
         <h5 class="card-title">{{canzone.title}}</h5>
-        <p class="card-text-author"><strong>canzone:</strong> {{canzone.author}}</p>
+        <p class="card-text-author"><strong>autore:</strong> {{canzone.author}}</p>
         <p class="card-text-category"><strong>categoria:</strong> {{canzone.category}}</p>
         <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
         <div class="brando">
@@ -14,25 +14,25 @@
     </div>
 </div>
 <div class="container-pagination" *ngIf="page != 'home' && !wantedCategory">
-<div class="testo-ricette-totali">
- <!-- <strong>{{ricettePerPagina}}</strong> canzoni su un totale di <strong>{{canzoni.length}}</strong> <br> pagina corrente <strong>{{page}}</strong> -->
-</div>
-<ngb-pagination [collectionSize]="canzoni.length * 2 + (canzoniPerPagina * 2)" [(page)]="pag"  aria-label="default pagination" >
-</ngb-pagination>
-</div>
+  <div class="testo-canzoni-totali">
+   <!-- <strong>{{ricettePerPagina}}</strong> canzoni su un totale di <strong>{{canzoni.length}}</strong> <br> pagina corrente <strong>{{page}}</strong> -->
+  </div>
+  <p-paginator [rows]="4" [totalRecords]="canzoni.length" (onPageChange)="paginate($event)"></p-paginator>
+  </div>
+
 
 
 
 <div class="container-pop" *ngIf="wantedCategory ==='pop'">
   <div class="container lista-canzoni-pop">
-    <h2 class="titolo">lista delle canzoni pop disponibili {{pagingNumber}}</h2>
+    <h2 class="titolo">lista delle canzoni pop disponibili</h2>
    </div>
    <div class="container-carte-pop">
     <div class="card pop-card" style="width: 18rem;" *ngFor="let canzone of canzoniFilter | slice: (pag * canzoniPerPagina) - canzoniPerPagina : pag * canzoniPerPagina">
       <div class="card-image pop-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
       <div class="card-body pop-body">
         <h5 class="card-title pop-title">{{canzone.title}}</h5>
-        <p class="card-text-author"><strong>canzone:</strong> {{canzone.author}}</p>
+        <p class="card-text-author"><strong>autore:</strong> {{canzone.author}}</p>
         <p class="card-text-category "><strong>categoria:</strong> {{canzone.category}}</p>
         <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
         <div class="brando">
@@ -43,8 +43,7 @@
    </div>
 
   <div class="container-pagination-pop">
-    <ngb-pagination [collectionSize]="(canzoniFilter.length * 2) + (canzoniPerPagina * 2)" [(page)]="pag"  aria-label="default pagination" >
-    </ngb-pagination>
+    <p-paginator [rows]="4" [totalRecords]="canzoniFilter.length" (onPageChange)="paginate($event)"></p-paginator>
   </div>
 
 </div>
@@ -58,7 +57,7 @@
     <div class="card-image rap-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
     <div class="card-body rap-body">
       <h5 class="card-title rap-title">{{canzone.title}}</h5>
-      <p class="card-text-author"><strong>canzone:</strong> {{canzone.author}}</p>
+      <p class="card-text-author"><strong>autore:</strong> {{canzone.author}}</p>
       <p class="card-text-category "><strong>categoria:</strong> {{canzone.category}}</p>
       <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
       <div class="brando">
@@ -68,10 +67,76 @@
   </div>
  </div>
  <div class="container-pagination-rap">
-  <ngb-pagination [collectionSize]="(canzoniFilter.length * 2) + (canzoniPerPagina * 2)" [(page)]="pag"  aria-label="default pagination" >
-  </ngb-pagination>
+  <p-paginator [rows]="4" [totalRecords]="canzoniFilter.length" (onPageChange)="paginate($event)"></p-paginator>
+</div>
 </div>
 
 
+<div class="container-rock" *ngIf="wantedCategory ==='rock'">
+  <div class="container lista-canzoni-rock">
+   <h2 class="titolo">lista delle canzoni rock disponibili</h2>
+  </div>
+  <div class="container-carte-rock">
+   <div class="card rock-card" style="width: 18rem;" *ngFor="let canzone of canzoniFilter| slice: (pag * canzoniPerPagina) - canzoniPerPagina : pag * canzoniPerPagina">
+     <div class="card-image rock-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
+     <div class="card-body rock-body">
+       <h5 class="card-title rock-title">{{canzone.title}}</h5>
+       <p class="card-text-author"><strong>canzone:</strong> {{canzone.author}}</p>
+       <p class="card-text-category "><strong>categoria:</strong> {{canzone.category}}</p>
+       <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
+       <div class="brando">
+         <a routerLink="/canzoni/testo/{{canzone._id}}" class="btn btn-primary rock-button">Testo</a>
+       </div>
+     </div>
+   </div>
+  </div>
+  <div class="container-pagination-rock">
+    <p-paginator [rows]="4" [totalRecords]="canzoniFilter.length" (onPageChange)="paginate($event)"></p-paginator>
+ </div>
+ </div>
 
-</div>
+ <div class="container-trap" *ngIf="wantedCategory ==='trap'">
+  <div class="container lista-canzoni-trap">
+   <h2 class="titolo">lista delle canzoni trap disponibili</h2>
+  </div>
+  <div class="container-carte-trap">
+   <div class="card trap-card" style="width: 18rem;" *ngFor="let canzone of canzoniFilter| slice: (pag * canzoniPerPagina) - canzoniPerPagina : pag * canzoniPerPagina">
+     <div class="card-image trap-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
+     <div class="card-body trap-body">
+       <h5 class="card-title trap-title">{{canzone.title}}</h5>
+       <p class="card-text-author"><strong>canzone:</strong> {{canzone.author}}</p>
+       <p class="card-text-category "><strong>categoria:</strong> {{canzone.category}}</p>
+       <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
+       <div class="brando">
+         <a routerLink="/canzoni/testo/{{canzone._id}}" class="btn btn-primary trap-button">Testo</a>
+       </div>
+     </div>
+   </div>
+  </div>
+  <div class="container-pagination-trap">
+    <p-paginator [rows]="4" [totalRecords]="canzoniFilter.length" (onPageChange)="paginate($event)"></p-paginator>
+ </div>
+ </div>
+
+ <div class="container-lirica" *ngIf="wantedCategory ==='lirica'">
+  <div class="container lista-canzoni-lirica">
+   <h2 class="titolo">lista delle canzoni liriche disponibili</h2>
+  </div>
+  <div class="container-carte-lirica">
+   <div class="card lirica-card" style="width: 18rem;" *ngFor="let canzone of canzoniFilter| slice: (pag * canzoniPerPagina) - canzoniPerPagina : pag * canzoniPerPagina">
+     <div class="card-image lirica-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
+     <div class="card-body lirica-body">
+       <h5 class="card-title lirica-title">{{canzone.title}}</h5>
+       <p class="card-text-author"><strong>canzone:</strong> {{canzone.author}}</p>
+       <p class="card-text-category "><strong>categoria:</strong> {{canzone.category}}</p>
+       <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
+       <div class="brando">
+         <a routerLink="/canzoni/testo/{{canzone._id}}" class="btn btn-primary lirica-button">Testo</a>
+       </div>
+     </div>
+   </div>
+  </div>
+  <div class="container-pagination-lirica">
+    <p-paginator [rows]="4" [totalRecords]="canzoniFilter.length" (onPageChange)="paginate($event)"></p-paginator>
+ </div>
+ </div>
