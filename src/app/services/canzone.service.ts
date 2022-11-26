@@ -11,6 +11,7 @@ export class CanzoneService {
 
   apiBaseUrl="api/canzoni";
   wantedCanzone= new ReplaySubject();
+  autore=new ReplaySubject();
 
 
   constructor(private http:HttpClient) { }

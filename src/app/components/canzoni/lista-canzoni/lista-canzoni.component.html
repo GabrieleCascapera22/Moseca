@@ -1,0 +1,21 @@
+<div class="container-cards">
+  <div class="card" style="width: 18rem;" *ngFor="let canzone of canzoni | slice: (pag * canzoniPerPagina) - canzoniPerPagina : pag * canzoniPerPagina">
+    <div class="card-image" [ngStyle]=" {'background-image':'url(' + canzone.image +')'}"></div>
+    <div class="card-body">
+      <h5 class="card-title">{{canzone.title}}</h5>
+      <p class="card-text-author"><strong>autore:</strong> {{canzone.author}}</p>
+      <p class="card-text-category"><strong>categoria:</strong> {{canzone.category}}</p>
+      <p class="card-text-date"><strong>data di pubblicazione:</strong> {{canzone.date}}</p>
+      <div class="brando">
+        <a routerLink="/canzoni/testo/{{canzone._id}}" class="btn btn-primary">Testo</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-pagination">
+<div class="testo-canzoni-totali">
+ <!-- <strong>{{ricettePerPagina}}</strong> canzoni su un totale di <strong>{{canzoni.length}}</strong> <br> pagina corrente <strong>{{page}}</strong> -->
+</div>
+<p-paginator [rows]="4" [totalRecords]="canzoni.length" (onPageChange)="paginate($event)"></p-paginator>
+</div>
+

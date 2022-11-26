@@ -12,6 +12,7 @@ import { ProfiloComponent } from './components/users/profilo/profilo.component';
 import { LoggedInGuard } from './components/logged-in.guard';
 import { RisultatoComponent } from './components/canzoni/risultato/risultato.component';
 import { AutoriComponent } from './components/autori/autori.component';
+import { ListaCanzoniComponent } from './components/canzoni/lista-canzoni/lista-canzoni.component';
 
 const routes: Routes = [
 {path:'',redirectTo:'home',pathMatch:'full'},
@@ -19,8 +20,8 @@ const routes: Routes = [
 {path:'categoria/:category',component:CategoriaComponent},
 {path:'registrazione',component:RegistrationComponent},
 {path:'autori',component:AutoriComponent},
-
 {path:'canzoni',component:CanzoniComponent,children:[
+{path:'lista-canzoni/:autore',component:ListaCanzoniComponent},
 {path:'testo/:_id',component:TestoComponent},
 {path:'risultato',component:RisultatoComponent},
 {path:"nuova-canzone",component:NuovaCanzoneComponent,canActivate: [LoggedInGuard]},

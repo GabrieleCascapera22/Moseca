@@ -1,0 +1,29 @@
+.autori{
+  margin: auto;
+  display: flex;
+  text-align: center;
+  border: 1px solid #A50B5E;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 0px;
+
+  form{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    flex-direction: column;
+
+    #lista-autori{
+      margin-top: 10px;
+
+
+    }
+  }
+
+  #immagine{
+    background-position: top;
+    background-size: cover;
+    border-radius: 0px 18px 18px 0px;
+  }
+}

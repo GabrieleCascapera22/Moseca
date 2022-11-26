@@ -37,7 +37,8 @@ import { CascadeSelectModule } from "primeng/cascadeselect";
 import { MultiSelectModule } from "primeng/multiselect";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { InputTextModule } from "primeng/inputtext";
-import {TableModule} from 'primeng/table';
+import {ListboxModule} from 'primeng/listbox';
+import {ButtonModule} from 'primeng/button';
 
 import { NuovaCanzoneComponent } from './components/canzoni/nuova-canzone/nuova-canzone.component';
 import { LoginComponent } from './components/users/login/login.component';
@@ -45,6 +46,7 @@ import { ProfiloComponent } from './components/users/profilo/profilo.component';
 import * as moment from 'moment';
 import { RisultatoComponent } from './components/canzoni/risultato/risultato.component';
 import { AutoriComponent } from './components/autori/autori.component';
+import { ListaCanzoniComponent } from './components/canzoni/lista-canzoni/lista-canzoni.component';
 
 
 @NgModule({
@@ -64,7 +66,8 @@ import { AutoriComponent } from './components/autori/autori.component';
     LoginComponent,
     ProfiloComponent,
     RisultatoComponent,
-    AutoriComponent
+    AutoriComponent,
+    ListaCanzoniComponent
 
   ],
   imports: [
@@ -96,7 +99,8 @@ import { AutoriComponent } from './components/autori/autori.component';
     ToastModule,
     PaginatorModule,
     CKEditorModule,
-    TableModule
+    ListboxModule,
+    ButtonModule
 
 
   ],

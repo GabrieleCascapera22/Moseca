@@ -1,3 +1,10 @@
-<div class="container col-10">
-  adhoafhqeopsad{{autori.length}}
+<div class="container col-10  row autori">
+
+  <form class="form col-4 autori">
+    <h2>I nostri autori</h2>
+    <p-listbox [options]="autori" [(ngModel)]="autoreSelezionato" optionLabel="nome" [filter]="true" id="lista-autori" [listStyle]="{'max-height':'450px'}" (onChange)="goTo($event)"></p-listbox>
+  </form>
+
+  <div class="col-6" [ngStyle]="{ 'background-image': 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Salmo-8.jpg/2560px-Salmo-8.jpg)'}" id="immagine" alt="immagine musica"></div>
 </div>
+

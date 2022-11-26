@@ -1,7 +1,12 @@
+import { PrimeNGConfig } from 'primeng/api';
 import { Canzone } from './../../models/Canzone.model';
 import { Component, OnInit } from '@angular/core';
 import { CanzoneService } from 'src/app/services/canzone.service';
 import { ActivatedRoute, Router } from '@angular/router';
+
+interface Autore{
+  nome:string;
+}
 
 @Component({
   selector: 'app-autori',
@@ -11,32 +16,45 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AutoriComponent implements OnInit {
 
   canzoni:Canzone[];
-  autori:string[]=[];
+  autori:Autore[]=[];
+  autoreSelezionato:string;
 
   constructor(
     private canzoneService: CanzoneService,
     private activatedRoute:ActivatedRoute,
     private router:Router,
+    private primengConfig: PrimeNGConfig
   ) { }
 
   ngOnInit(): void {
-    this.onGetCategory();
+    this.onGetCanzoni();
+    this.primengConfig.ripple = true;
   }
 
-  onGetCategory(){
+
+
+
+
+
+  onGetCanzoni(){
     this.activatedRoute.params.subscribe((urlParams) =>{
       this.canzoneService.getCanzoni().subscribe({
         next:(res)=>{
           this.canzoni=res;
 
           for(let i=0;i<this.canzoni.length;i++){
-            if(this.autori.includes(this.canzoni.at(i).author))
+            if(this.autori.find((author) => this.controlloAutore(author.nome,this.canzoni.at(i).author)))
             {
 
             }else{
-              this.autori.push(this.canzoni.at(i).author);
+              let autore:Autore;
+              autore={
+                'nome':this.canzoni.at(i).author
+              }
+              this.autori.push(autore);
             }
           }
+
         },
         error:(error)=>{console.error(error)},
       })
@@ -44,4 +62,13 @@ export class AutoriComponent implements OnInit {
 
   }
 
+  controlloAutore(autore:string,autoreDB:string){
+    return autore === autoreDB;
+  }
+
+
+  goTo(event:any){
+    this.canzoneService.autore.next(event.value.nome);
+    this.router.navigate([`/canzoni/lista-canzoni/${event.value.nome}`]);
+  }
 }

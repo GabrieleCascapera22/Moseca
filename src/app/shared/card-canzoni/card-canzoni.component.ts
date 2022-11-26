@@ -41,8 +41,8 @@ constructor(
     this.wantedCategory=urlParams['category'];
 
       this.canzoneService.getCanzoni().subscribe({
-        next:(res)=>{this.canzoni=res;
-
+        next:(res)=>{
+          this.canzoni=res;
           if(this.wantedCategory)
           {
             this.canzoniFilter=this.canzoni.filter((canzone)=>canzone.category===this.wantedCategory);
