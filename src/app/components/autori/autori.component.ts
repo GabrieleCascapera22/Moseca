@@ -3,6 +3,7 @@ import { Canzone } from './../../models/Canzone.model';
 import { Component, OnInit } from '@angular/core';
 import { CanzoneService } from 'src/app/services/canzone.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 interface Autore{
   nome:string;
@@ -17,7 +18,13 @@ export class AutoriComponent implements OnInit {
 
   canzoni:Canzone[];
   autori:Autore[]=[];
-  autoreSelezionato:string;
+
+
+
+    autoreSelezionato: string;
+
+
+
 
   constructor(
     private canzoneService: CanzoneService,
